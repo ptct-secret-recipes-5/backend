@@ -1,4 +1,5 @@
 Backend for Build week ptct-secret-recipes-5 project <br/>
+Base URL = https://ptct-secret-recipes.herokuapp.com/ <br/>
 
 ### Register Schema
 
