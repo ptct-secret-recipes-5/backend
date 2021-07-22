@@ -8,20 +8,21 @@ exports.up = async function (knex) {
 
   await knex.schema.createTable("recipes", (table) => {
     table.increments("recipe_id");
-    table.text("recipe_name").notNull().unique();
+    table
+      .integer("user_id")
+      .references("user_id")
+      .inTable("users")
+      .onDelete("CASCADE")
+      .onUpdate("CASCADE");
+    table.text("recipe_name").notNull();
     table.text("source");
-    table.date("date").notNull();
-    table.text("start_time").notNull();
-    table.tinyint("duration_mins");
-    table.text("intensity");
-    table.text("location").notNull();
-    table.tinyint("current_registered").defaultTo(0);
-    table.tinyint("max_recipe_size");
+    table.text("ingredients").notNull();
+    table.text("category").notNull();
+    table.text("instructions").notNull();
   });
 };
 
 exports.down = async function (knex) {
+  await knex.schema.dropTableIfExists("recipes");
   await knex.schema.dropTableIfExists("users");
-  await knex.schema.dropTableIfExists("roles");
-  await knex.schema.dropTableIfExists("recipees");
 };
