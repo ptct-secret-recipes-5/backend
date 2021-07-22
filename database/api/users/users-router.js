@@ -2,7 +2,7 @@ const express = require("express");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const Users = require("./users-model");
-//const { validateRegister, checkUsernameFree } = require("./users-middleware");
+const { validateRegister, checkUsernameFree } = require("./users-middleware");
 
 const router = express.Router();
 
@@ -21,8 +21,8 @@ router.get("/api/users", async (req, res, next) => {
 
 router.post(
   "/api/auth/register",
-  //validateRegister,
-  //checkUsernameFree,
+  validateRegister,
+  checkUsernameFree,
   async (req, res, next) => {
     try {
       const { username, password, email } = req.body;
