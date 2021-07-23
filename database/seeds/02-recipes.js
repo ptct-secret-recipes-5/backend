@@ -21,7 +21,7 @@ exports.seed = async function (knex) {
         "Step 1 In a small bowl, mix the maple syrup, soy sauce, garlic, garlic salt, and pepper. Step 2 Place salmon in a shallow glass baking dish, and coat with the maple syrup mixture. Cover the dish, and marinate salmon in the refrigerator 30 minutes, turning once. Step 3 Preheat oven to 400 degrees F (200 degrees C). Step 4 Place the baking dish in the preheated oven, and bake salmon uncovered 20 minutes, or until easily flaked with a fork.",
     },
     {
-      user_id: 0,
+      user_id: 1,
       recipe_name: "Spicy Sushi Mayo",
       source: "Cicely",
       ingredients:
@@ -51,7 +51,7 @@ exports.seed = async function (knex) {
         "Step 1 Bring a large pot of lightly salted water to a boil. Cook linguine at a boil until tender yet firm to the bite, about 11 minutes. Step 2 While linguine is cooking, melt butter in a frying pan. Mix in 1 tablespoon parsley, salt, and pepper. Add shrimp and cook for 2 minutes, flipping 1 or 2 times. Add 1 tablespoon parsley, lemon juice, and garlic. Cook for another 2 minutes, flipping 1 or 2 more times. Pour in sherry and cook for 1 minute. Step 3 Drain linguine and divide among plates. Spoon shrimp on top, reserving juices for dipping or to pour over pasta at the table. Sprinkle remaining 1 tablespoon parsley over each plate for garnish.",
     },
     {
-      user_id: 3,
+      user_id: 2,
       recipe_name: "Keto Fried Chicken",
       source: "Merry",
       ingredients:
