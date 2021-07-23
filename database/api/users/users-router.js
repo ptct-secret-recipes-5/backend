@@ -34,7 +34,7 @@ router.post(
         ),
         email,
       });
-      res.status(201).json(newUser[0]);
+      res.status(201).json(newUser);
     } catch (err) {
       next(err);
     }
@@ -47,16 +47,13 @@ router.post("/api/auth/login", async (req, res, next) => {
     //console.log(dbPass);
     const bodyPass = req.body.password;
 
-    if (!dbPass[0]) {
+    if (!dbPass) {
       return res.status(401).json({
         message: "Incorrect username or password",
       });
     }
 
-    const passwordValidation = await bcrypt.compare(
-      bodyPass,
-      dbPass[0].password
-    );
+    const passwordValidation = await bcrypt.compare(bodyPass, dbPass.password);
 
     if (!passwordValidation) {
       return res
@@ -66,9 +63,8 @@ router.post("/api/auth/login", async (req, res, next) => {
 
     const token = jwt.sign(
       {
-        userID: dbPass[0].user_id,
-        username: dbPass[0].username,
-        userRole: dbPass[0].role,
+        userID: dbPass.user_id,
+        username: dbPass.username,
         successfulLogin: true,
       },
       process.env.JWT_SECRET
@@ -77,8 +73,7 @@ router.post("/api/auth/login", async (req, res, next) => {
     res.cookie("token", token);
     res.status(200).json({
       message: `Welcome ${req.body.username}`,
-      username: dbPass[0].username,
-      role: dbPass[0].role,
+      username: dbPass.username,
       token: token,
     });
   } catch (err) {

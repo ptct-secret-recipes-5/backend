@@ -2,7 +2,7 @@ const express = require("express");
 const helmet = require("helmet");
 const cors = require("cors");
 const cookieParser = require("cookie-parser");
-//const recipesRouter = require("./recipes/recipes-router");
+const recipesRouter = require("./recipes/recipes-router");
 const usersRouter = require("./users/users-router");
 
 const server = express();
@@ -12,7 +12,7 @@ server.use(cors());
 server.use(express.json());
 server.use(cookieParser());
 
-//server.use(recipesRouter);
+server.use(recipesRouter);
 server.use(usersRouter);
 
 server.use((err, req, res, next) => {
