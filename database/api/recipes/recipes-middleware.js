@@ -6,7 +6,7 @@ function checkRecipePayload(req, res, next) {
   if (!recipe_name || !ingredients || !category || !instructions) {
     return res.status(400).json({
       message:
-        "recipe name, ingredients, category, and/or instructions are required",
+        "recipe name, ingredients, category, and/or instructions are missing",
     });
   }
   next();

@@ -50,15 +50,5 @@ exports.seed = async function (knex) {
       instructions:
         "Step 1 Bring a large pot of lightly salted water to a boil. Cook linguine at a boil until tender yet firm to the bite, about 11 minutes. Step 2 While linguine is cooking, melt butter in a frying pan. Mix in 1 tablespoon parsley, salt, and pepper. Add shrimp and cook for 2 minutes, flipping 1 or 2 times. Add 1 tablespoon parsley, lemon juice, and garlic. Cook for another 2 minutes, flipping 1 or 2 more times. Pour in sherry and cook for 1 minute. Step 3 Drain linguine and divide among plates. Spoon shrimp on top, reserving juices for dipping or to pour over pasta at the table. Sprinkle remaining 1 tablespoon parsley over each plate for garnish.",
     },
-    {
-      user_id: 2,
-      recipe_name: "Keto Fried Chicken",
-      source: "Merry",
-      ingredients:
-        "10 ounce chicken salt to taste pepper 1 tablespoon blanched almond flour ½ teaspoon granulated garlic avocado oil",
-      category: "Main Dish",
-      instructions:
-        "Step 1 Cut chicken and Mix spices. Step 2 Put flour and spices Step 3 Pour enough avocado oil,Turn and cook on the other side until internal temperature reaches 165 degrees F (74 degrees C), about 2 more minutes.",
-    },
   ]);
 };
