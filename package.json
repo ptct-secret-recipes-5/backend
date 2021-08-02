@@ -27,8 +27,11 @@
   },
   "homepage": "https://github.com/ptct-secret-recipes-5/backend#readme",
   "devDependencies": {
+    "@types/jest": "^26.0.24",
     "eslint": "^7.31.0",
-    "nodemon": "^2.0.12"
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12",
+    "supertest": "^6.1.4"
   },
   "dependencies": {
     "bcryptjs": "^2.4.3",
