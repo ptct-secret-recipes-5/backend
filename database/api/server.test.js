@@ -24,7 +24,7 @@ describe("recipes endpoints", () => {
       expect(res.body).toHaveLength(5);
     });
     it("responses with a 200 OK", async () => {
-      const res = await supertest(server).get("./api/recipes");
+      const res = await supertest(server).get("/api/recipes");
       expect(res.status).toBe(200);
     });
   });
